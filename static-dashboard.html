@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard LSNN - Administración</title>
+    <link rel="stylesheet" href="static-homepage.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.0/dist/umd/supabase.js"></script>
+</head>
+<body class="dashboard-body">
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <span class="badge">LSNN STAFF</span>
+                <h2 id="profileName">Cargando...</h2>
+                <p class="role">RANGO: <span id="profileRole">—</span></p>
+            </div>
+            <nav class="nav-menu">
+                <a href="static-dashboard.html" class="nav-item active"><span class="nav-icon">📊</span><span class="nav-text">Panel de control</span></a>
+                <a href="static-redaccion.html" class="nav-item"><span class="nav-icon">🔥</span><span class="nav-text">Redactar noticia</span></a>
+                <a href="static-homepage.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-text">Volver a la web principal</span></a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="logout-btn">Cerrar sesión general</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="content-header">
+                <h1>ADMINISTRACIÓN DEL ENTORNO</h1>
+                <p>Modifica los módulos inmersivos globales.</p>
+            </header>
+
+            <section class="card">
+                <h3>🚨 CINTILLO DE INMERSIÓN: ÚLTIMA HORA</h3>
+                <input type="text" class="input-full" value="LOS SANTOS SE VISTE DE GALA: ALCALDE ACKERLEY ENCABEZÓ MASIVO DESFILE">
+            </section>
+
+            <section class="card">
+                <h3>🛰️ SATÉLITE Y SEGURIDAD DE LOS SANTOS</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>CLIMA ACTUAL E INMERSIÓN</label>
+                        <div class="input-group">
+                            <select id="weatherSelect" class="input-full">
+                                <option value="sun">☀️ Soleado</option>
+                                <option value="cloud">☁️ Nublado</option>
+                                <option value="rain">🌧️ Lluvia</option>
+                                <option value="storm">⛈️ Tormenta</option>
+                                <option value="fog">🌫️ Niebla</option>
+                                <option value="wind">💨 Ventoso</option>
+                                <option value="night">🌙 Noche</option>
+                            </select>
+                            <input id="weatherDescription" type="text" class="input-full" value="Despejado" placeholder="Estado descriptivo" />
+                            <div class="temp-field">
+                                <input id="temperatureInput" type="number" class="input-full" value="28">
+                                <span>°C</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>ÍNDICE DE CRIMINALIDAD</label>
+                        <input id="criminalityInput" type="text" class="input-full" value="ALTO (Idlewood/Ganton)">
+                    </div>
+                    <div class="form-group">
+                        <label>CÓDIGO OPERATIVO LSPD</label>
+                        <input id="alertInput" type="text" class="input-full" value="Alerta Verde">
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-header-flex">
+                    <h3>💰 GESTIÓN DE PATROCINIOS Y MARCAS</h3>
+                    <button id="addSponsorBtn" class="add-btn" type="button">+ Añadir Marca Patrocinadora</button>
+                </div>
+                <div id="sponsorshipList">
+                    <!-- Los bloques de patrocinio se inyectan aquí mediante JS -->
+                    <section class="sponsorship-block">
+                        <div class="sponsorship-header">
+                            <p class="label-small">PATROCINIO #1</p>
+                            <button type="button" class="remove-btn">Remover Marca</button>
+                        </div>
+                        <label>NOMBRE DE LA EMPRESA COMERCIAL</label>
+                        <input type="text" class="input-full" value="SAFE HEAVEN SECURITY">
+                        <label>SLOGAN O MENSAJE</label>
+                        <textarea class="input-full">La empresa más grande en protección.</textarea>
+                    </section>
+                </div>
+                <button id="publishChangesBtn" class="publish-btn" type="button">💾 PUBLICAR CAMBIOS EN VIVO</button>
+                <p id="dashboardMessage" class="dashboard-message"></p>
+                <p id="dashboardDebug" class="dashboard-message" style="color:#7da2ff;font-size:0.95rem;"></p>
+            </section>
+        </main>
+    </div>
+    <script src="static-dashboard.js?v=5"></script>
+</body>
+</html>

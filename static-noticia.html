@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noticia | LSNN</title>
+    <link rel="stylesheet" href="static-homepage.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.0/dist/umd/supabase.js"></script>
+  </head>
+  <body class="redaccion-shell">
+    
+    <main class="redaccion-page">
+      <a href="./static-homepage.html" style="color: #94a3b8; text-decoration: none; margin-bottom: 1rem; display: inline-block;">← Volver al panel</a>
+      
+      <article class="redaccion-card">
+        <header>
+          <span class="redaccion-badge" style="background: var(--accent-soft); color: var(--accent); padding: 0.25rem 0.75rem; border-radius: 2rem; font-size: 0.75rem;">POLÍTICA</span>
+          <h1 id="articleTitle" style="margin: 1rem 0 0.5rem 0;">Cargando noticia...</h1>
+          <p id="articleSubtitle" style="color: #94a3b8; font-style: italic;"></p>
+        </header>
+
+        <section style="margin: 2rem 0;">
+          <img id="articleImage" src="" alt="Imagen de noticia" style="width: 100%; border-radius: 1rem; object-fit: cover;" />
+          <div id="articleText" style="line-height: 1.8; color: #e5e7eb; margin-top: 1.5rem;"></div>
+        </section>
+
+        <section class="redaccion-form" style="border-top: 1px solid var(--border); padding-top: 2rem;">
+          <h2 style="font-size: 1.1rem; margin-bottom: 1.5rem;">Comentarios de la Ciudadanía</h2>
+          
+          <div class="form-row">
+            <label class="field-label">Nombre de tu Personaje</label>
+            <input id="commentAuthor" type="text" placeholder="Ej: Dimitri_Romanov" class="input-full" />
+          </div>
+          
+          <div class="form-row">
+            <label class="field-label">Tu Comentario</label>
+            <textarea id="commentText" rows="4" placeholder="Escribe tu opinión respetando el entorno..." class="input-full"></textarea>
+          </div>
+          
+          <button id="submitCommentBtn" class="redaccion-submit" type="button">Enviar Comentario</button>
+        </section>
+
+        <div id="commentList" style="margin-top: 2rem;"></div>
+      </article>
+    </main>
+
+    <script src="static-noticia.js"></script>
+  </body>
+</html>

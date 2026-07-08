@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LSNN - Los Santos News Network</title>
+    <link rel="stylesheet" href="static-homepage.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.0/dist/umd/supabase.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="breaking-bar">
+        <span class="breaking-badge">Última Hora</span>
+        <marquee class="breaking-text" id="breakingText">[LSNN] Sintonizando frecuencias de emergencia...</marquee>
+      </div>
+
+      <header class="hero-section">
+        <div class="hero-inner">
+          <div class="hero-meta">
+            <div>Edición Digital Nº 142</div>
+            <div>Los Santos, San Andreas</div>
+            <div>Domingo, 2026</div>
+          </div>
+
+          <a href="./" class="hero-title-link">
+            <h1 class="hero-title">Los Santos <span>News</span> Network</h1>
+          </a>
+          <p class="hero-subtitle">"La verdad informativa al servicio de la ciudadanía de San Andreas"</p>
+        </div>
+      </header>
+
+      <nav class="category-nav">
+        <div class="category-list" id="categoryButtons"></div>
+      </nav>
+
+      <main class="page-grid">
+        <section class="primary-column">
+          <div class="section-header">
+            <h2 id="sectionTitle">Titulares Principales</h2>
+            <span class="article-count" id="articleCount">0 artículos encontrados</span>
+          </div>
+
+          <div id="contentArea"></div>
+        </section>
+
+        <aside class="sidebar">
+          <div class="panel panel-highlight">
+            <div class="panel-glow"></div>
+            <h3 class="panel-title">🌤️ Estado de Los Santos</h3>
+            <div class="panel-row weather-row">
+              <span>Temperatura General:</span>
+              <div class="weather-info">
+                <span id="estadoClimaEmoji" class="weather-icon"></span>
+                <strong id="estadoClimaText">Despejado (28°C)</strong>
+              </div>
+            </div>
+            <div class="panel-row"><span>Riesgo de Criminalidad:</span><strong id="estadoCriminalidad">ALTO (Idlewood/Ganton)</strong></div>
+            <div class="panel-row"><span>Jurisdicción de Alerta:</span><strong id="estadoAlerta">Alerta Verde</strong></div>
+          </div>
+
+          <div class="panel panel-ads">
+            <span class="ad-label">Espacios Publicitarios</span>
+            <h4 class="ad-title">Marcas Asociadas a LSNN</h4>
+            <div id="adsArea" class="ad-list"></div>
+          </div>
+
+          <div class="panel panel-emergency">
+            <h4 class="emergency-title">🚨 Central de Emergencias</h4>
+            <ul class="emergency-list">
+              <li><span>LSPD (Policía):</span><strong>911</strong></li>
+              <li><span>SAFD (Médicos/Bomberos):</span><strong>911</strong></li>
+              <li><span>Línea Directa LSNN:</span><strong>55521192</strong></li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+
+      <footer class="page-footer">
+        <div class="footer-top">
+          <div>
+            <h3>Los Santos News Network</h3>
+            <p>Somos la cadena de información periodística líder en todo el estado de San Andreas, comprometidos con la verdad y la inmediatez de los sucesos locales.</p>
+          </div>
+
+          <div>
+            <h3>Secciones Rápidas</h3>
+            <div class="footer-links">
+              <button class="footer-link" data-category="INICIO">Principal</button>
+              <button class="footer-link" data-category="SUCESOS">Sucesos Críticos</button>
+              <button class="footer-link" data-category="POLÍTICA">Gobernación</button>
+              <button class="footer-link" data-category="SOCIEDAD">Cultura y Eventos</button>
+            </div>
+          </div>
+
+          <div>
+            <h3>Configuración y Acceso</h3>
+            <a href="./static-login.html" class="cta-secondary">👤 Portal Staff</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-links-row">
+            <a href="#">Términos de Uso IC</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Código Deontológico Periodístico</a>
+            <a href="#">Normativa de Prensa de San Andreas</a>
+            <a href="#">Mapa del Sitio Web</a>
+          </div>
+          <div class="footer-copy">
+            <p>© 2026 Los Santos News Network. Una división de San Andreas Broadcasting & Media Corporation. Todos los derechos reservados.</p>
+            <p>Todo el contenido publicado en este portal web tiene propósitos estrictamente de entretenimiento y simulación de rol (In-Character) dentro de la comunidad de SARP.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="static-homepage.js"></script>
+  </body>
+</html>

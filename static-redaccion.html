@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LSNN - Terminal de Redacción</title>
+    <link rel="stylesheet" href="static-homepage.css" />
+  </head>
+  <body class="redaccion-shell">
+    <header class="redaccion-topbar">
+      <div class="redaccion-topbar-left">
+        <span class="redaccion-badge">LSNN</span>
+        <span class="redaccion-topbar-title">TERMINAL DE REDACCIÓN</span>
+      </div>
+      <div class="redaccion-topbar-links">
+        <a href="static-dashboard.html">VOLVER AL DASHBOARD</a>
+        <span> | </span>
+        <a href="static-homepage.html">SALIR A PORTADA</a>
+      </div>
+    </header>
+
+    <main class="redaccion-page">
+      <section class="redaccion-card">
+        <h1>Redactar nueva nota</h1>
+
+        <form class="redaccion-form">
+          <div class="redaccion-grid-two">
+            <div class="form-row">
+              <label class="field-label" for="reportero">Nombre del reportero (IC):</label>
+              <input id="reportero" type="text" placeholder="Ej: Saul_Ramos" />
+            </div>
+            <div class="form-row">
+              <label class="field-label" for="categoria">Categoría:</label>
+              <select id="categoria">
+                <option>Sucesos</option>
+                <option>Política</option>
+                <option>Sociedad</option>
+                <option>Deportes</option>
+                <option>Cultura</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="field-label" for="titulo">Titular principal:</label>
+            <input id="titulo" type="text" placeholder="Escribe el título..." />
+          </div>
+
+          <div class="form-row">
+            <label class="field-label" for="subtitulo">Subtítulo:</label>
+            <textarea id="subtitulo" rows="3" placeholder="Resumen corto..."></textarea>
+          </div>
+
+          <div class="form-row">
+            <label class="field-label" for="captura">Enlace de la captura (Imgur/Discord):</label>
+            <input id="captura" type="url" placeholder="https://..." />
+          </div>
+
+          <div class="form-row">
+            <label class="field-label" for="cuerpo">Cuerpo del reportaje:</label>
+            <textarea id="cuerpo" rows="8" placeholder="Contenido..."></textarea>
+          </div>
+
+          <button id="publishNewsBtn" type="button" class="redaccion-submit">Publicar reportaje de prensa</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="redaccion.js"></script>
+
+</script>
+  </body>
+</html>
